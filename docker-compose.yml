@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  dummy:
+    image: busybox  # Utilisation d'un conteneur "dummy" qui ne fait rien
+    command: "echo 'This is a dummy service'"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true  # Utilise le réseau Docker existant
+
+    
